@@ -1,0 +1,30 @@
+body{
+  /* background: black; */
+
+}
+
+.input{
+  margin-left: 25%;
+  width: 50%;
+  length:auto;
+  background-color:
+}
+
+#signup,#signin{
+  margin-left: 25%;
+  width: 50%;
+  length:auto;
+
+}
+
+.container{
+  margin-left: 25%;
+}
+
+.header{
+  margin-left: 25%;
+  font-weight: bold;
+}
+#input_box{
+  margin-left: 25%;
+}

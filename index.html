@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+    <script src="config.js" charset="utf-8"></script>
+
+    <link rel="stylesheet" href="home.css">
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body onload="create_unfinished_task(),create_finished_task()">
+
+
+
+
+    <div id="login">
+      <input class="input" type="email" id="email" placeholder="email">
+      <input class="input" type="password" id="password" placeholder="password">
+      <li></li>
+      <button onclick="signup()" id="signup">signup</button>
+      <button onclick="signin()" id="signin">signin</button>
+
+
+    </div>
+
+    <div id="content_container" >
+      <div id="finish_task_header">
+        <p class="header">finish task</p>
+      </div>
+
+
+        <input type="text" placeholder="search" id="search">
+        <button type="button" onclick="search()"name="button">search</button>
+
+
+      <div id="task_input_container">
+        <input type="text" id="input_box" placeholder="Start a task">
+        <input type="date" id="input_date">
+        <button id="input_button" onclick="add_task();">Enter the task</button>
+        <button onclick="signout()" id="signout">signout</button>
+        <p class="header">Tasks</p>
+
+        <div class="container">
+
+        </div>
+      </div>
+
+
+      <p class="header">Tasks finished</p>
+      <div class="container">
+
+      </div>
+
+    </div>
+
+  </body>
+</html>
