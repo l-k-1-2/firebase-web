@@ -143,13 +143,16 @@ function signout() {
        task_data=document.createElement('div');
        task_data.setAttribute('id','tesk_data');
 
+
        title=document.createElement('p');
        title.setAttribute('id','task_title');
+       title.setAttribute('class','task_title')
        title.setAttribute('contenteditable',false);
        title.innerHTML = task_title;
 
        date=document.createElement('p');
        date.setAttribute('id','task_date');
+       date.setAttribute('class','task_date')
        date.setAttribute('contenteditable',false);
        date.innerHTML = task_date;
 
@@ -224,11 +227,13 @@ function signout() {
 
        title=document.createElement('p');
        title.setAttribute('id','task_title');
+       title.setAttribute('class','task_title')
        title.setAttribute('contenteditable',false);
        title.innerHTML = task_title;
 
        date=document.createElement('p');
        date.setAttribute('id','task_date');
+       date.setAttribute('class','task_date')
        date.setAttribute('contenteditable',false);
        date.innerHTML = task_date;
 
@@ -335,34 +340,26 @@ function task_delete(task) {
  //search
 function search() {
   var input = document.getElementById('search').value.toLowerCase();
-  // div = document.getElementsByClassName("task_container");
-  p=document.getElementsByTagName('p');
-  console.log(p);
+  div = document.getElementsByClassName("task_container");
+  task_title=document.getElementsByClassName('task_title');
+  task_date=document.getElementsByClassName('task_date');
+  console.log(div);
 
-  for (i = 0; i < p.length; i++) {
-    txtValue = p[i].innerHTML || p[i].innerText;
+
+//  p=document.getElementsByTagName('p');
+
+
+  for (i = 0; i < task_title.length; i++) {
+    txtValue = task_title[i].innerHTML || task_title[i].innerText;
     if (txtValue.toLowerCase().indexOf(input) > -1) {
-       p[i].style.display = "";
+       task_title[i].style.display = "";
+       div[i].style.display="";
+       console.log(i);
      }
     else {
-       p[i].style.display = "none";
+       task_title[i].style.display = "none";
+       div[i].style.display="none";
      }
   }
 
 }
-
-
- // function(e){
- //   const term=e.target.value.toLowerCase();
- //   const data=list.getElementsByTagName('p');
- //   Array.from(data).forEach(function(book){
- //     const task_name=book.firstElementChild.textContent;
- //     if (task_name.toLowerCase().indexOf(term) != -1) {
- //       book.style.display="block";
- //     }
- //     else {
- //       book.style.display="none";
- //     }
- //   });
- //
- // }
